@@ -1,0 +1,563 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Radha's Mehndi & Nail Art</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap"
+        rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <!-- DotLottie Player -->
+    <!-- <dotlottie-player src="https://lottie.host/ff3c1f25-b49d-47c6-8606-11ca1b40b1c1/myDINs5d3Z.lottie"
+        background="transparent" speed="1" style="width: 300px; height: 300px" loop autoplay></dotlottie-player> -->
+    <div id="preloader">
+        <img src="./Assets/loader.gif" alt="Loading..." />
+    </div>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <div class="logo-primary">Radha's</div>
+                <div class="logo-secondary">Mehndi & Nail Art</div>
+            </div>
+
+            <nav class="desktop-nav">
+                <ul>
+                    <li><a href="#home" class="nav-link">Home</a></li>
+                    <li><a href="#services" class="nav-link">Services</a></li>
+                    <li><a href="#gallery" class="nav-link">Gallery</a></li>
+                    <li><a href="#about" class="nav-link">About</a></li>
+                    <li><a href="#testimonials" class="nav-link">Testimonials</a></li>
+                    <li><a href="#booking" class="nav-link">Book Now</a></li>
+                    <li><a href="#contact" class="nav-link">Contact</a></li>
+                </ul>
+            </nav>
+
+            <button class="mobile-menu-toggle">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </header>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu">
+        <div class="mobile-menu-header">
+            <div class="logo">
+                <div class="logo-primary">Radha's</div>
+                <div class="logo-secondary">Mehndi & Nail Art</div>
+            </div>
+            <button class="mobile-menu-close">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#home" class="mobile-nav-link">Home</a></li>
+                <li><a href="#services" class="mobile-nav-link">Services</a></li>
+                <li><a href="#gallery" class="mobile-nav-link">Gallery</a></li>
+                <li><a href="#about" class="mobile-nav-link">About</a></li>
+                <li><a href="#testimonials" class="mobile-nav-link">Testimonials</a></li>
+                <li><a href="#booking" class="mobile-nav-link">Book Now</a></li>
+                <li><a href="#contact" class="mobile-nav-link">Contact</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-section">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1>Enhance Your <span class="text-primary">Beauty</span> with Exquisite <span
+                            class="text-secondary">Artistry</span></h1>
+                    <p>Experience the perfect blend of tradition and modern aesthetics with our premium mehndi and nail
+                        art services. Each design tells a unique story, crafted with precision and passion.</p>
+                    <div class="hero-buttons">
+                        <a href="#booking" class="btn btn-primary">Book Appointment</a>
+                        <a href="#gallery" class="btn btn-outline">View Gallery</a>
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <div class="image-backdrop-1"></div>
+                    <img src="./Assets/hero.png" alt="Mehndi and Nail Art by Radha">
+                    <div class="image-backdrop-2"></div>
+                </div>
+            </div>
+
+            <div class="hero-stats">
+                <div class="stat-item">
+                    <div class="stat-number">2+</div>
+                    <div class="stat-text">Years of Experience</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">70+</div>
+                    <div class="stat-text">Happy Clients</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">4.9</div>
+                    <div class="stat-text">Star Rating</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Our <span class="text-primary">Services</span></h2>
+                <div class="accent-line"></div>
+                <p>Discover our range of personalized services designed to enhance your natural beauty. Each service is
+                    customized to fit your style and preferences.</p>
+            </div>
+
+            <div id="services-grid" class="services-grid">
+                <!-- Services will be loaded dynamically from JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery" class="gallery-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Our <span class="text-primary">Gallery</span></h2>
+                <div class="accent-line"></div>
+                <p>Explore our collection of intricate designs and artistic expressions. Each piece showcases the blend
+                    of tradition and contemporary styles.</p>
+            </div>
+
+            <div class="text-center">
+                <div class="gallery-filter">
+                    <button class="filter-btn active" data-filter="all">All</button>
+                    <button class="filter-btn" data-filter="mehndi">Mehndi Art</button>
+                    <button class="filter-btn" data-filter="nail">Nail Art</button>
+                </div>
+            </div>
+
+            <div id="gallery-grid" class="gallery-grid">
+                <!-- Gallery items will be loaded dynamically from JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about-section">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-image">
+                    <div class="image-border"></div>
+                    <img src="./Assets/about.png" alt="Radha - Mehndi and Nail Artist">
+                </div>
+                <div class="about-text">
+                    <h2>About <span class="text-primary">Radha</span></h2>
+                    <div class="accent-line"></div>
+                    <p>Hello! I'm Radha, a passionate mehndi and nail artist with over 2 years of experience in
+                        creating stunning designs that capture the essence of tradition with a modern twist.</p>
+                    <p>My journey began as a small hobby and has evolved into a successful business serving clients for
+                        weddings, special occasions, and everyday beauty enhancements. I believe that every design tells
+                        a story and reflects the personality of the wearer.</p>
+                    <p>I use only premium, natural ingredients for mehndi and high-quality, long-lasting products for
+                        nail art. My priority is not just creating beautiful designs but ensuring a comfortable,
+                        enjoyable experience for every client.</p>
+                    <p>Whether you're looking for an intricate bridal mehndi design or a subtle, elegant nail art
+                        pattern, I'm dedicated to bringing your vision to life with precision and care.</p>
+                    <div class="social-links">
+                        <a href="https://www.instagram.com/Radha_mehndi_art__?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
+                            target="_blank"><i class="fab fa-instagram"></i></a>
+                        <a id="whatsapp-link" href="#" target="_blank"><i class="fa-brands fa-whatsapp"></i></a>
+                        <a href="mailto:example@gmail.com" target="_blank"><i class="fa-regular fa-envelope"
+                                style="color: #800020;"></i></a>
+                        <!-- <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-pinterest"></i></a>
+                        <a href="#"><i class="fab fa-tiktok"></i></a> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="testimonials-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Client <span class="text-primary">Testimonials</span></h2>
+                <div class="accent-line"></div>
+                <p>Read what our clients have to say about their experiences. Their satisfaction is our greatest
+                    achievement.</p>
+            </div>
+
+            <div class="testimonials-slider">
+                <div id="testimonials-container" class="testimonials-container">
+                    <!-- Testimonials will be loaded dynamically from JavaScript -->
+                </div>
+
+                <button class="slider-btn prev-btn">
+                    <i class="fas fa-chevron-left"></i>
+                </button>
+
+                <button class="slider-btn next-btn">
+                    <i class="fas fa-chevron-right"></i>
+                </button>
+
+                <div id="slider-dots" class="slider-dots">
+                    <!-- Dots will be added dynamically from JavaScript -->
+                </div>
+            </div>
+
+            <!-- Review Submission Form -->
+            <!-- <div class="review-form-container">
+                <h3>Share Your Experience</h3>
+                <p>We'd love to hear about your experience with our services. Your feedback helps us improve and helps others make informed decisions.</p>
+                
+                <form id="review-form" class="review-form">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="review-name">Your Name</label>
+                            <input type="text" id="review-name" name="name" placeholder="Enter your name" required>
+                            <div id="review-name-error" class="error-message"></div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="review-rating">Rating</label>
+                            <select id="review-rating" name="rating" required>
+                                <option value="">Select a rating</option>
+                                <option value="5">5 - Excellent</option>
+                                <option value="4">4 - Very Good</option>
+                                <option value="3">3 - Good</option>
+                                <option value="2">2 - Fair</option>
+                                <option value="1">1 - Poor</option>
+                            </select>
+                            <div id="review-rating-error" class="error-message"></div>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="review-service">Service You Received</label>
+                        <select id="review-service" name="service" required>
+                            <option value="">Select a service</option>
+                            <option value="Bridal Mehndi">Bridal Mehndi</option>
+                            <option value="Party & Event Mehndi">Party & Event Mehndi</option>
+                            <option value="Nail Art">Nail Art</option>
+                            <option value="Nail Care & Pedicure">Nail Care & Pedicure</option>
+                            <option value="Custom Mehndi Design">Custom Mehndi Design</option>
+                        </select>
+                        <div id="review-service-error" class="error-message"></div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="review-message">Your Review</label>
+                        <textarea id="review-message" name="message" rows="4" placeholder="Tell us about your experience" required></textarea>
+                        <div id="review-message-error" class="error-message"></div>
+                    </div>
+                    
+                    <div class="form-group text-center">
+                        <button type="submit" class="btn btn-primary">Submit Review</button>
+                    </div>
+                </form>
+            </div> -->
+        </div>
+    </section>
+
+    <!-- Booking Section -->
+    <section id="booking" class="booking-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Book Your <span class="text-primary">Appointment</span></h2>
+                <div class="accent-line"></div>
+                <p>Schedule your session with us. We'll ensure a personalized experience that meets your expectations.
+                </p>
+            </div>
+
+            <div class="booking-content">
+                <div class="booking-info">
+                    <div class="booking-benefits">
+                        <h3>Why Book With Us?</h3>
+                        <ul>
+                            <li><i class="fas fa-check-circle"></i> Personalized consultation for each client</li>
+                            <li><i class="fas fa-check-circle"></i> Premium, skin-friendly products</li>
+                            <li><i class="fas fa-check-circle"></i> Flexible scheduling options</li>
+                            <li><i class="fas fa-check-circle"></i> Hygienic and comfortable environment</li>
+                            <li><i class="fas fa-check-circle"></i> Time-efficient service without compromising quality
+                            </li>
+                            <li><i class="fas fa-check-circle"></i> Follow-up care instructions</li>
+                        </ul>
+                    </div>
+
+                    <div class="contact-info">
+                        <h3>Contact Information</h3>
+                        <div class="contact-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <p>Surat, Gujarat<br>395006</p>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-phone"></i>
+                            <p>+91 12345 65789</p>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <p>example@gmail.com</p>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-clock"></i>
+                            <p>
+                                Monday - Friday: 10:00 AM - 7:00 PM<br>
+                                Saturday: 10:00 AM - 5:00 PM<br>
+                                Sunday: Closed (Available for special events)
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="booking-form-container">
+                    <h3>Request an Appointment</h3>
+                    <form id="booking-form" class="booking-form" name="booking-form" netlify>
+                        <div class="form-group">
+                            <label for="name">Your Name</label>
+                            <input type="text" id="name" name="name" placeholder="Enter your full name" required>
+                            <div id="name-error" class="error-message"></div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="email">Email Address</label>
+                                <input type="email" id="email" name="email" placeholder="Enter your email" required>
+                                <div id="email-error" class="error-message"></div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="phone">Phone Number</label>
+                                <input type="tel" id="phone" name="phone" placeholder="Enter your phone number"
+                                    required>
+                                <div id="phone-error" class="error-message"></div>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="service">Service Type</label>
+                            <select id="service" name="service" required>
+                                <option value="">Select a service</option>
+
+                                <option value="bridal-mehndi">Bridal Mehndi</option>
+                                <option value="engagement-mehndi">Engagement Mehndi</option>
+                                <option value="baby-shower-mehndi">Baby Shower Mehndi</option>
+                                <option value="sider-mehndie">Sider Mehndi</option>
+                                <option value="hand-mehndi">Hand Mehndi</option>
+                                <option value="leg-mehndi">Leg Mehndi</option>
+
+                                <option value="gel-polish">Gel Polish</option>
+                                <option value="extension">Extension</option>
+                                <option value="gel-polish">Gel Extension</option>
+                                <option value="extension">Acrylic nails</option>
+                                <option value="extension">Temporary Extension</option>
+                            </select>
+                            <div id="service-error" class="error-message"></div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="date">Preferred Date</label>
+                                <input type="date" id="date" name="date" required>
+                                <div id="date-error" class="error-message"></div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="time">Preferred Time</label>
+                                <select id="time" name="time" required>
+                                    <option value="">Select a time</option>
+                                    <option value="10:00">10:00 AM</option>
+                                    <option value="11:00">11:00 AM</option>
+                                    <option value="12:00">12:00 PM</option>
+                                    <option value="13:00">1:00 PM</option>
+                                    <option value="14:00">2:00 PM</option>
+                                    <option value="15:00">3:00 PM</option>
+                                    <option value="16:00">4:00 PM</option>
+                                    <option value="17:00">5:00 PM</option>
+                                    <option value="18:00">6:00 PM</option>
+                                </select>
+                                <div id="time-error" class="error-message"></div>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="message">Additional Information (optional)</label>
+                            <textarea id="message" name="message" rows="4"
+                                placeholder="Tell us more about your requirements or any special requests"></textarea>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary btn-full">Submit Booking Request</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Get in <span class="text-primary">Touch</span></h2>
+                <div class="accent-line"></div>
+                <p>Have questions or need more information? Reach out to us using the form below or connect through our
+                    social media channels.</p>
+            </div>
+
+            <div class="contact-content">
+                <div class="contact-form-container">
+                    <h3>Send Us a Message</h3>
+                    <form id="contact-form" class="contact-form" name="contact-form" netlify>
+                        <div class="form-group">
+                            <label for="contact-name">Your Name</label>
+                            <input type="text" id="contact-name" name="contact-name" placeholder="Enter your full name"
+                                required>
+                            <div id="contact-name-error" class="error-message"></div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="contact-email">Email Address</label>
+                            <input type="email" id="contact-email" name="contact-email" placeholder="Enter your email"
+                                required>
+                            <div id="contact-email-error" class="error-message"></div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="subject">Subject</label>
+                            <input type="text" id="subject" name="subject" placeholder="Enter message subject" required>
+                            <div id="subject-error" class="error-message"></div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="message">Your Message</label>
+                            <textarea id="message" name="message" rows="5" placeholder="Type your message here"
+                                required></textarea>
+                            <div id="message-error" class="error-message"></div>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary btn-full">Send Message</button>
+                    </form>
+                </div>
+
+                <div class="contact-info-container">
+                    <div class="social-block">
+                        <h3>Connect With Us</h3>
+                        <p>Follow us on social media for the latest designs, promotions, and behind-the-scenes content.
+                        </p>
+                        <div class="social-links">
+                            <a href="https://www.instagram.com/keshvi_mehndi_art__?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
+                                target="_blank"><i class="fab fa-instagram"></i></a>
+                            <a id="whatsapp-link" href="#" target="_blank"><i class="fa-brands fa-whatsapp"></i></a>
+                            <a href="mailto:example@gmail.com" target="_blank"><i
+                                    class="fa-regular fa-envelope" style="color: #800020;"></i></a>
+                        </div>
+                    </div>
+
+                    <div class="newsletter-block">
+                        <h3>Subscribe to Our Newsletter</h3>
+                        <p>Stay updated with our latest designs, promotions, and events.</p>
+                        <form id="newsletter-form" class="newsletter-form">
+                            <div class="form-group">
+                                <div class="newsletter-input-group">
+                                    <input type="email" id="newsletter-email" name="newsletter-email"
+                                        placeholder="Enter your email" required>
+                                    <button type="submit" class="btn btn-secondary">Subscribe</button>
+                                </div>
+                                <div id="newsletter-email-error" class="error-message"></div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-col">
+                    <h3>Radha's Mehndi & Nail Art</h3>
+                    <p>Transforming traditional art forms into contemporary expressions of beauty. We specialize in
+                        creating unique designs that reflect your personality and style.</p>
+                </div>
+
+                <div class="footer-col">
+                    <h3>Quick Links</h3>
+                    <div class="footer-links">
+                        <a href="#home">Home</a>
+                        <a href="#services">Services</a>
+                        <a href="#gallery">Gallery</a>
+                        <a href="#about">About</a>
+                        <a href="#testimonials">Testimonials</a>
+                        <a href="#booking">Book Now</a>
+                    </div>
+                </div>
+
+                <div class="footer-col">
+                    <h3>Services</h3>
+                    <div class="footer-links">
+                        <a href="#booking">Bridal Mehndi</a>
+                        <a href="#booking">Party & Event Mehndi</a>
+                        <a href="#booking">Nail Art</a>
+                        <a href="#booking">Nail Care & Pedicure</a>
+                        <a href="#booking">Custom Mehndi Designs</a>
+                    </div>
+                </div>
+
+                <div class="footer-col">
+                    <h3>Contact Us</h3>
+                    <ul class="contact-info">
+                        <li><i class="fas fa-map-marker-alt"></i> Surat, Gujarat</li>
+                        <li><i class="fas fa-phone"></i> +91 12345 65789</li>
+                        <li><i class="fas fa-envelope"></i> example@gmail.com</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <div class="copyright">
+                    © <span id="current-year">2025</span> Sumil Dholakiya All rights reserved.
+                </div>
+                <div class="footer-bottom-links">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                    <a href="#">Cookie Policy</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Toast Notification -->
+    <div id="toast" class="toast">
+        <div class="toast-content">
+            <div id="toast-icon" class="toast-icon">
+                <i class="fas fa-check-circle"></i>
+            </div>
+            <div class="toast-message-container">
+                <h4 id="toast-title" class="toast-title">Success!</h4>
+                <p id="toast-message" class="toast-message">Your message has been sent successfully.</p>
+            </div>
+            <button id="toast-close" class="toast-close">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+    </div>
+
+    <!-- Custom JavaScript -->
+    <script src="scripts.js"></script>
+    <!-- <script src="https://unpkg.com/@dotlottie/player-component@2.7.12/dist/dotlottie-player.mjs" type="module"></script> -->
+</body>
+
+</html>
